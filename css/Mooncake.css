@@ -1,0 +1,100 @@
+.background_pk{
+	background-color: #FFE2DF;
+	height: 200px;
+	padding-top: 20px;
+}
+.Series{
+	height: 800px;
+}
+.Series1, .Series2, .Series3, .Series4{
+	width: 500px;
+	height: 338.737px;
+	float: left;
+	border-radius: 20px;
+	padding-top: 12%;
+	margin: 2%;
+	margin-bottom: 0px;
+ }
+.Series1{
+	background-image: url(../img/Series1.png);
+}
+.Series2{
+	background-image: url(../img/Series2.png);
+}
+.Series3{
+	background-image: url(../img/Series3.png);
+}
+.Series4{
+	background-image: url(../img/Series4.jpg);
+	background-size: cover;
+}
+.box{
+	background-image: url(../img/Serires5.png);
+	height: 650px;
+	padding-left: 5%;
+	padding-right: 5%;	
+	background-position: center; 
+}
+.box1{
+	
+	border-radius: 20px;
+
+}
+.text_box{
+	font-size: 36px; 
+	line-height: 40px;
+}
+
+@media only screen and (max-width: 768px){
+.Series{
+	height: 1500px;
+}
+.Series1, .Series2, .Series3, .Series4{
+	width: 500px;
+	height: 338.737px;
+	float: left;
+	border-radius: 20px;
+	padding-top: 15%;
+	margin: 2%;
+	margin-bottom: 0px;
+	margin-left: 12%;
+
+}
+.box{
+	background-color: #FFE2DF;
+	height: 900px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.text_box{
+	font-size: 30px;
+	line-height: 36px;
+}
+
+}
+
+
+@media only screen and (max-width: 576px){
+.Series{
+	height: 1500px;
+}
+.Series1, .Series2, .Series3, .Series4{
+	width: 500px;
+	height: 338.737px;
+	float: left;
+	border-radius: 20px;
+	padding-top: 20%;
+	margin: 2%;
+	margin-bottom: 0px;
+
+
+}
+
+.text_box{
+	font-size: 30px;
+	line-height: 36px;
+	width: 400px;
+}
+
+}
+

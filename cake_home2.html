@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trà</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/all.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Crimson+Text|Nunito+Sans:400,400i,700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/About.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .pagination {
+      justify-content: center;
+      font-size: large;
+    }
+    .overlay {
+      height: 100%;
+      width: 100%;
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(255, 255, 255);
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 20%;
+      width: 70%;
+      text-align: center;
+      margin-top: 30px;
+      margin: auto;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+      cursor: pointer;
+      color: #e58393;
+    }
+    .overlay input[type="text"] {
+      font-size: 18px;
+      border: none;
+      float: left;
+      width: 80%;
+      background-color: #ffe3e1;
+      color: #7c7c7c;
+      border-radius: 30px;
+      margin-right: -25px;
+      padding: 15px 30px;
+    }
+
+    .overlay a {
+      float: left;
+      width: 20%;
+      cursor: pointer;
+      border-radius: 30px;
+      padding: 15px 30px;
+      border: none;
+      box-shadow: 0;
+      background-color: #e58393;
+      color: #fff;
+      font-size: 18px;
+      margin-left: -25px;
+      margin-right: 0px;
+    }
+    .btn.btn_buy {
+      margin-top: 10px;
+    }
+    .sliderImg {
+      display: flex;
+      margin-bottom: 20px;
+      animation: swipeImg 20s ease-in-out infinite;
+    }
+    @keyframes swipeImg {
+      15% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(calc(-100%));
+      }
+      50% {
+        transform: translateX(calc(-100%));
+      }
+      60% {
+        transform: translateX(calc(-100% * 2));
+      }
+      85% {
+        transform: translateX(calc(-100% * 2));
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    button {
+      cursor: pointer;
+    }
+    h6 {
+      line-height: 1.5;
+    }
+    .timer {
+      border: 2px solid #000;
+      background-color: #fff;
+      color: #000;
+      padding: 3px;
+    }
+  </style>
+  <body>
+    <!--nav-->
+    <!--header-->
+    <!--header xl-->
+    <div class="container-fluid d-lg-block d-none height_60 text-center">
+      <p class="logo_text">Tanu</p>
+    </div>
+    <!--end container-fluid-->
+    <div class="container-fluid d-lg-block d-none height_60 pink_bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <div class="d-flex justify-content-center">
+              <nav class="navbar navbar-expand-lg main_nav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="About.html" class="nav-link pr-4">Trang chủ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle pr-4"
+                      href="https://www.phuclong.com.vn"
+                      id="navbardrop"
+                      data-toggle="dropdown"
+                      onclick="gotoBlog()"
+                      >Trà</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="banh_ngot.html" class="nav-link pr-4">Bánh ngot</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="lien_he.html" class="nav-link pr-4">Liên hệ</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="d-flex justify-content-begin">
+              <div>
+                <button
+                  class="openBtn pt_signin btn btn-lg btn-link"
+                  onclick="openSearch()">
+                  <i class="cart_grey fas fa-search"></i>
+                </button>
+              </div>
+              <div class="pt_signin">
+                <a
+                  href="#"
+                  class="btn btn_view_2"
+                  data-toggle="modal"
+                  data-target="#sign_in"
+                  >Đăng nhập</a
+                >
+              </div>
+              <div class="dropdown pt-1">
+                <button
+                  class="dropdown-toggle btn btn-lg btn-link"
+                  href="#"
+                  data-toggle="dropdown">
+                  <p class="cart_grey"><i class="fas fa-shopping-cart"></i></p>
+                </button>
+
+                <div class="dropdown-menu cart" style="margin-left: -80px">
+                  <a class="dropdown-item" href="cart.html"
+                    ><i class="fas fa-shopping-cart symbol"></i> &nbsp; Giỏ
+                    hàng</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+    </div>
+    <!--end container-fluid-->
+
+    <!--header md-->
+    <div class="container-fluid d-lg-none d-md-block height_60 text-center">
+      <p class="logo_text">Tanu</p>
+    </div>
+    <div class="container-fluid d-lg-none d-md-block pink_bg height_60">
+      <div class="container">
+        <div class="row d-flex justify-content-between">
+          <div>
+            <nav class="navbar navbar-collapse">
+              <!--button-->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#main_nav">
+                <i class="fas fa-bars hamburger"></i>
+              </button>
+
+              <!--main nav-->
+              <div
+                class="collapse navbar-collapse bg_nav mt-1 px-2"
+                id="main_nav">
+                <ul class="navbar-nav">
+                  <!--nav-item-->
+                  <li class="nav-item">
+                    <a href="About.html" class="nav-link">Trang chủ</a>
+                  </li>
+
+                  <!--nav-item-->
+                  <li class="nav-item dropdown mr-3">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="tra.html"
+                      id="navbardrop"
+                      data-toggle="dropdown"
+                      >Trà</a
+                    >
+                    <!--drop down-->
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="leaf.html">Trà tươi</a>
+                      <a class="dropdown-item" href="bags.html">Trà túi lọc</a>
+                    </div>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="banh_ngot.html" class="nav-link">Bánh ngot</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!--end menu-->
+          <!--search-->
+          <!--sign-->
+          <div class="d-flex justify-content-begin">
+            <div>
+              <button
+                class="openBtn pt_signin btn btn-lg btn-link"
+                onclick="openSearch()">
+                <i class="cart_grey fas fa-search"></i>
+              </button>
+            </div>
+            <div class="pt_signin">
+              <a
+                href="#"
+                class="btn btn_view_2"
+                data-toggle="modal"
+                data-target="#sign_in"
+                >Đăng nhập</a
+              >
+            </div>
+            <div class="dropdown pt-1">
+              <button
+                class="dropdown-toggle btn btn-lg btn-link text-white"
+                href="#"
+                data-toggle="dropdown">
+                <p class="cart_grey"><i class="fas fa-shopping-cart"></i></p>
+              </button>
+
+              <div class="dropdown-menu cart" style="margin-left: -100px">
+                <a class="dropdown-item" href="cart.html"
+                  ><i class="fas fa-shopping-cart symbol"></i> &nbsp; Giỏ
+                  hàng</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end row-->
+    </div>
+    <!--end container-->
+
+    <div id="myOverlay" class="overlay">
+      <span class="closebtn" onclick="closeSearch()" title="Close Overlay"
+        >×</span
+      >
+      <div class="overlay-content pt-5">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Tìm kiếm" name="search" />
+          <a href="search.html"><i class="fa fa-search"></i></a>
+        </form>
+        <br /><br />
+        <div class="mt-5">
+          <button class="btn btn_view_1 mr-3 mb-3">Trà</button>
+          <button class="btn btn_view_1 mr-3 mb-3">Bánh ngot</button>
+        </div>
+      </div>
+    </div>
+
+    <!--modal-->
+
+    <!--sign in-->
+    <div class="modal fade" id="sign_in">
+      <div class="modal-dialog">
+        <div class="modal-content p-3">
+          <!--modal header-->
+          <div class="modal-header">
+            <h2 class="modal-title sign_header">Đăng nhập</h2>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <!--modal body-->
+          <div class="modal-body">
+            <form action="">
+              <!--email-->
+              <div class="form-group">
+                <label id="sign" for="email">Tài khoản</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Nhập Email" />
+              </div>
+              <!--end form group-->
+
+              <div class="form-group">
+                <label for="pwd">Mật khẩu</label>
+                <input
+                  type="password"
+                  name="pwd"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="Nhập mật khẩu" />
+              </div>
+              <!--end form group-->
+
+              <!--button-->
+              <button type="submit" onsubmit="signin()" class="btn btn_buy">
+                Đăng nhập
+              </button>
+              <a href="#" class="font_16 text-secondary">
+                &nbsp Quên mật khẩu?</a
+              >
+            </form>
+          </div>
+          <!--end modal body-->
+
+          <div class="modal-footer">
+            <div class="d-flex justify-content-begin">
+              <div>
+                <p class="font_16">Chưa có tài khoản?</p>
+              </div>
+              &nbsp; &nbsp;
+              <div>
+                <a
+                  href="#"
+                  class="btn btn_view"
+                  data-dismiss="modal"
+                  data-toggle="modal"
+                  data-target="#sign_up"
+                  >Đăng kí</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end modal content-->
+      </div>
+      <!--end modal dialog-->
+    </div>
+    <!---end modal-->
+
+    <div class="modal fade" id="sign_up">
+      <div class="modal-dialog">
+        <div class="modal-content p-3">
+          <!--modal header-->
+          <div class="modal-header">
+            <h2>Đăng kí</h2>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <!--modal body-->
+
+          <div class="modal-body">
+            <p class="font_16">Vui lòng điền vào mẫu này để tạo tài khoản.</p>
+            <form action="">
+              <!--name-->
+              <div class="form-group">
+                <label for="hoten">Họ và tên</label>
+                <input
+                  type="name"
+                  name="hoten"
+                  class="form-control"
+                  id="hoten"
+                  placeholder="Nhập họ và tên" />
+              </div>
+              <!--end form group-->
+
+              <div class="form-group">
+                <label for="email1">Tài khoản của bạn</label>
+                <input
+                  type="email"
+                  name="email1"
+                  class="form-control"
+                  id="email1"
+                  placeholder="Nhập tài khoản" />
+              </div>
+              <!--end form group-->
+
+              <div class="form-group">
+                <label for="pwd1">Mật khẩu</label>
+                <input
+                  type="password"
+                  name="pwd1"
+                  class="form-control"
+                  id="pwd1"
+                  placeholder="Nhập mật khẩu" />
+              </div>
+              <!--end form group-->
+
+              <div class="form-group">
+                <label for="pwd2">Xác nhận mật khẩu</label>
+                <input
+                  type="password"
+                  name="pwd2"
+                  class="form-control"
+                  id="pwd2"
+                  placeholder="Nhập xác nhận mật khẩu" />
+              </div>
+              <!--end form group-->
+              <p class="font_16">
+                Bằng cách tạo một tài khoản, bạn đồng ý với
+                <a href="#term" class="link_modal"
+                  >Điều khoản và quyền riêng tư</a
+                >.
+              </p>
+              <!--button-->
+              <button type="submit" class="btn btn_buy">Đăng kí</button>
+            </form>
+          </div>
+          <!--end modal body-->
+          <div class="modal-footer">
+            <a
+              href="#"
+              class="btn btn_view"
+              data-dismiss="modal"
+              data-toggle="modal"
+              data-target="#sign_in"
+              >Trở về đăng nhập</a
+            >
+          </div>
+        </div>
+        <!--end modal content-->
+      </div>
+      <!--end modal dialog-->
+    </div>
+    <!--end modal-->
+
+    <div class="sliderImg">
+      <img
+        src="https://banhtrungthu.biz/wp-content/uploads/2019/07/banner.jpg"
+        alt=""
+        style="width: 100%" />
+      <img
+        src="https://banhtrungthu.biz/wp-content/uploads/2019/07/banner.jpg"
+        alt=""
+        style="width: 100%" />
+      <img
+        src="https://banhtrungthu.biz/wp-content/uploads/2019/07/banner.jpg"
+        alt=""
+        style="width: 100%" />
+    </div>
+
+    <div class="container d-md-block d-none">
+      <div
+        style="background-color: #7c7c7c; height: 60px"
+        class="d-flex justify-content-between align-items-center">
+        <div class="d-flex" style="margin-top: 9px">
+          <h6>Khuyễn mãi</h6>
+          <div class="ml-4 lh-sm">
+            <span class="timer">09</span> : <span class="timer">09</span> :
+            <span class="timer">09</span>
+          </div>
+        </div>
+        <div class="d-flex">
+          <button role="button" class="d-flex align-content-center">
+            &lt;
+          </button>
+          <button role="button" class="d-flex align-content-center">
+            &gt;
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_35"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">250.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_36"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">260.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_37"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_38"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">270.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <h6>Bánh Trung Thu Hội An</h6>
+        <div class="d-flex">
+          <button role="button" class="d-flex align-content-center">
+            &lt;
+          </button>
+          <button role="button" class="d-flex align-content-center">
+            &gt;
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_35"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">250.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_36"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">260.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_37"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_39"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_40"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">205.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_41"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_43"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_38"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">270.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <h6>Bánh Trung Thu Bửu Yến</h6>
+        <div class="d-flex">
+          <button role="button" class="d-flex align-content-center">
+            &lt;
+          </button>
+          <button role="button" class="d-flex align-content-center">
+            &gt;
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_39"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_39"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_40"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">205.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_41"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_43"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_40"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">205.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_41"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_43"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <h6>Bánh Trung Thu Mor'dan</h6>
+        <div class="d-flex">
+          <button role="button" class="d-flex align-content-center">
+            &lt;
+          </button>
+          <button role="button" class="d-flex align-content-center">
+            &gt;
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_39"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_40"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">205.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_41"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_43"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_39"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_40"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">205.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_41"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+          <div class="product pro_bg_43"></div>
+          <div class="d-flex justify-content-between">
+            <a href="detail.html" class="pro_link"
+              ><h3>Lorem, ipsum dolor.</h3></a
+            >
+          </div>
+          <p class="price">300.000VND</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sunt
+            consequatur aut eos illum,...
+          </p>
+          <a href="cart.html" class="btn btn_view">Mua ngay</a>
+          <a href="detail.html" class="btn btn_buy">Thêm vào giỏ hàng</a>
+        </div>
+      </div>
+      <!--end row-->
+    </div>
+    <!--end container-->
+    <div class="container d-block d-md-none">
+      <div class="row">
+        <div class="col-6 mt-4 mb-5">
+          <div class="product pro_bg_44"></div>
+          <p class="hashtag mb-0 mt-3">#highcaffeine</p>
+          <div class="heart d-flex justify-content-between">
+            <h3>Lorem, ipsum dolor.</h3>
+            <button
+              class="btn_heart"
+              data-toggle="tooltip"
+              title="Add to wish list">
+              <i class="far fa-heart"></i>
+            </button>
+            <button
+              class="btn_heart_hover"
+              data-toggle="tooltip"
+              title="Add to wish list">
+              <i class="fas fa-heart"></i>
+            </button>
+          </div>
+          <p class="price">$25.00</p>
+
+          <a href="#" class="btn btn_buy">Mua ngay</a>
+        </div>
+        <!--end copyzone-->
+      </div>
+      <!--row-->
+    </div>
+    <div class="container">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="cake_home.html">Trước</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="cake_home.html">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="cake_home2.html">2</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container-fluid d-lg-block d-none footer_bg mt-5">
+      <div class="container">
+        <div class="row pb-3">
+          <div class="col-3 logo_footer pt_150 pl-0">
+            <img class="w-100" src="imgs/logo_footer.png" />
+          </div>
+          <div class="col-6"></div>
+          <div class="col-3">
+            <p class="footer_h1"></p>
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="http:/facebook.com" class="nav-link symbol_1"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link symbol_1"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link symbol_1"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link symbol_1"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--end row-->
+
+        <hr class="footer_hr" />
+        <div class="row pt-2">
+          <div class="col-3">
+            <p class="grey_text">Copyright &copy;Tanu. All rights reserved.</p>
+          </div>
+          <div class="col-9">
+            <div class="row">
+              <a href="privacy.html" class="pink_link">Privacy Policies</a>
+              <p class="ver_bar">&nbsp; | &nbsp;</p>
+              <a href="#" class="pink_link">Terms of Use</a>
+              <p class="ver_bar">&nbsp; | &nbsp;</p>
+              <a href="#" class="pink_link"
+                >Paid Service Terms and Conditions</a
+              >
+            </div>
+          </div>
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+    </div>
+    <!--end container-fluid xl-->
+
+    <script type="text/javascript" src="slick/jquery.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        /*slideshow_0*/
+
+        $(".Slidenshow_about").slick({
+          centerMode: true,
+          autoplay: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        });
+      });
+      function openSearch() {
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function closeSearch() {
+        document.getElementById("myOverlay").style.display = "none";
+      }
+      $(document).ready(function () {
+        $(".dropdown").mouseenter(function () {
+          $(this).find(".dropdown-menu").slideDown("fast");
+        });
+        $(".dropdown").mouseleave(function () {
+          $(this).find(".dropdown-menu").slideUp("slow");
+        });
+      });
+      function gotoBlog() {
+        location.replace("tea.html");
+      }
+      $(document).ready(function () {
+        $(".dropdown").mouseenter(function () {
+          $(this).find(".dropdown-menu").slideDown("fast");
+        });
+        $(".dropdown").mouseleave(function () {
+          $(this).find(".dropdown-menu").slideUp("fast");
+        });
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        /*heart*/
+        $(".heart").mouseenter(function () {
+          $(this).find("button.btn_heart").css("display", "none");
+          $(this).find("button.btn_heart_hover").css("display", "inline-block");
+        });
+        $(".heart").mouseleave(function () {
+          $(this).find("button.btn_heart").css("display", "inline-block");
+          $(this).find("button.btn_heart_hover").css("display", "none");
+        });
+      });
+    </script>
+    <script>
+      function signin() {
+        alert("Xin chao");
+      }
+    </script>
+
+    <script>
+      function loadpage() {
+        var loc = getParameter("page");
+        var tag = document.getElementById("P" + loc);
+        if (tag == null) {
+          tag = document.getElementById("P1");
+        }
+        tag.style.display = "block";
+        tag = document.getElementById("N" + loc);
+        if (tag == null) {
+          tag = document.getElementById("N1");
+        }
+        tag.className = "curpage";
+      }
+      function getParameter(name) {
+        var loc = location + "";
+        var pos = loc.indexOf("?");
+        if (pos < 0) return "";
+        loc = loc.substring(pos + 1);
+        pos = loc.indexOf(name + "=");
+        if (pos < 0) return "";
+        loc = loc.substring(pos + name.length + 1);
+        pos = loc.indexOf("&");
+        if (pos >= 0) {
+          loc = loc.substring(0, pos);
+        }
+        return loc;
+      }
+    </script>
+  </body>
+</html>

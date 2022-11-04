@@ -1,0 +1,74 @@
+.Checkout1{
+	background-image: url(../img/Checkout1.png);
+	background-size: cover;
+	height: 600px;
+	width: 100%;
+	padding-top: 17%;
+}
+.Checkout2{
+	background-image: url('../img/Checkout2.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	height:5rem;
+}
+.GH_text_02{
+	padding-top: 1.5%;
+	margin-left:15%;
+}
+.GH_text_02 p{
+	padding-top: 1.2%;
+}
+.fontsizechec{
+	font-size: 26px;
+}
+.textred{
+	color: red;
+}
+
+.border1{
+	border-color: #7696A6; 
+	border-radius: 10px;
+}
+.shop_table{
+
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+@media screen and (max-width: 768px){
+ .GH_text_02{
+	padding-top: 1.5%;
+	margin-left:15%;
+}
+.GH_text_02 p{
+	padding-top: 3%;
+}
+.fontsizechec{
+	font-size: 24px;
+}
+
+}
+
+
+@media screen and (max-width: 576px){
+	.w-75{
+	width: 100%;
+
+	}
+	.GH_text_02{
+	padding-top: 1.5%;
+	margin-left:2%;
+	
+	}
+	.GH_text_02 p{
+	padding-top: 3.5%;
+	}
+	.fontsizechec{
+	font-size: 22px;
+	}
+
+}

@@ -1,0 +1,35 @@
+.blue_text{
+	color: #7696A6;
+	
+}
+.cake_1{
+	background-image: url('../img/Box3.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.cake_1:hover{
+	background-image: url('../img/Box3_2.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.cake_2{
+	background-image: url('../img/Box4.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.cake_2:hover{
+	background-image: url('../img/Box4_2.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.cake_3{
+	background-image: url('../img/Box5.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.cake_3:hover{
+	background-image: url('../img/Box5_2.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}

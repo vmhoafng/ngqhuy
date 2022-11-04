@@ -1,0 +1,23 @@
+body{
+	font-family: Trebuchet MS, Ariall, San-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+.red_text{
+	color: #ED553B;
+	font-weight: bold;
+}
+.green_bg{
+	background-color: #02A676;
+	color: #fff;
+	padding: 20px;
+	border: 1px dashed #fff;
+
+}
+.yellow_bg{
+	background-color: #F2B134;
+	color: #fff;
+	padding: 20px;
+	border: 1px dashed #fff;
+
+}

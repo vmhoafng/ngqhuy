@@ -1,0 +1,153 @@
+.about1{
+	background-image: url('../img/about1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 800px;
+	margin-bottom: -200px;
+}
+.about1 img {
+	padding:100px;
+	padding-left: 320px;
+	padding-bottom: 0px;
+}
+.about3{
+	margin-left: -30px;
+}
+.loverstory{
+height: 600px;
+}
+
+.loverstory_p{
+	margin: 15px;
+	margin-bottom: -200px;
+}
+
+.about4 img{
+	margin-top: 400px;
+	margin-left: -100px;
+	margin-bottom: -0px;
+}
+
+.text_only{
+	margin: 50px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+
+}
+
+.text_Selection1{
+	margin-left: 50px;
+}
+
+/*parallax Scrolling*/
+.bkg_color{
+	color: #777;
+	background-color:white;
+	text-align:center;
+	padding:30px 80px;
+	text-align: justify;
+}
+.about5, .about6{
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about5{
+	background-image: url(../img/about5.gif);
+	min-height: 400px;
+}
+
+.about6{
+	background-image: url(../img/about6.jpg);
+	min-height: 400px;
+}
+.about1_md{
+	background-image: url('../img/about1_md.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 450px;
+
+}
+.about1_md img {
+	margin:100px;
+}
+.about3_md img{
+	margin-left: 150px;
+}
+.about4_md img{
+	float: left;
+	margin-top:400px;
+	margin-left: -100px;
+	padding:0;
+	
+}
+.about9{
+	background-image: url(../img/about9.jpg);
+	min-height: 400px;
+	background-size: cover;
+}
+.about10{
+	background-image: url(../img/about6.jpg);
+	min-height: 400px;
+	background-size: cover;
+}
+.loverstory_md{
+	height: 1000px;
+	background-color: #fff;
+}
+.loverstory_pmd{
+	width: 800px;
+	margin-left:100px;
+	height: 600px;
+	background-color: #ffff;
+
+	
+}
+
+.about1_sm{
+	background-image: url('../img/about1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 500px;
+	
+
+}
+.loverstory_psm{
+	width: 600px;
+	margin-left:50px;
+	height: 600px;
+
+	background-color: #ffff;
+}
+@media only screen and (max-width: 576px){
+	.about1_sm{
+	background-image: url('../img/about1_sm.png');
+	background-repeat: no-repeat;
+	background-size: all;
+	height: 500px;
+	}
+	.about4_md{
+		margin:0px;
+		padding: 0px;
+	}
+	.loverstory_md{
+		margin:0;
+		padding:0;
+		height: 500px;
+	}
+	.loverstory_psm{
+		height: 100px;
+	}
+
+	.loverstory_psm{
+	width: 600px;
+	margin-left:50px;
+	height: 500px;
+
+	background-color: #ffff;
+	margin-top: -200px;
+}
+}

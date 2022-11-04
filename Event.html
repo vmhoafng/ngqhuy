@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Crimson+Text|Nunito+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/About.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </head>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="container-fluid d-lg-block d-none height_60 pink_bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="d-flex justify-content-center">
+            <nav class="navbar navbar-expand-lg main_nav">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a href="About.html" class="nav-link pr-4">Trang chủ</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        
+        <div class="col-2">
+          <div class="d-flex justify-content-begin">
+            <div>
+              <button class="openBtn pt_signin btn btn-lg btn-link" onclick="openSearch()">
+                <i class="cart_grey fas fa-search"></i>
+              </button>
+            </div>
+            <div class="pt_signin">
+              <a href="#" class="btn btn_view_2" data-toggle="modal" data-target="#sign_in">Đăng nhập</a>
+            </div>
+            <div class="dropdown pt-1">
+              <button class="dropdown-toggle btn btn-lg btn-link" href="#" data-toggle="dropdown">
+                  <p class="cart_grey"><i class="fas fa-shopping-cart"></i></p>
+                </button>
+                
+                <div class="dropdown-menu cart" style="margin-left:-80px">
+                  <a class="dropdown-item" href="cart.html"><i class="fas fa-shopping-cart symbol"></i> &nbsp; Giỏ hàng</a>
+                 </div>
+               </div>
+             </div>
+        </div>
+      </div><!--end row-->
+    </div><!--end container-->
+  </div><!--end container-fluid-->  	
+
+  
+  <!-- Form -->
+  <div id="about-nhantin">
+      <div id="about">
+        <h4 class="title-about title-split" data-split="2">
+            Trà TANU
+        </h4>
+        <div class="about-desc clearfix">
+          <p>Trong bối cảnh cả nước thực hiện giãn cách xã hội do đại dịch Covid-19, chúng ta vẫn có thể cùng nhau thưởng thức những tách trà ngon đậm vị và trò chuyện thân mật về những chủ đề quan tâm, nhờ sự trợ giúp của công nghệ hiện đại. Niềm đam mê thưởng trà bên những tâm hồn đồng điệu nay được thực hiện trên nền tảng trực tuyến hứa hẹn mang lại cho bạn những trải nghiệm mới lạ.</p>
+          <p>Lựa chọn địa điểm tổ chức,nơi bố trí tổ chức.Bên cạnh đó, việc chọn thời gian hợp lý để đưa đủ mọi thứ cũng rất quan trọng.Việc bạn chọn thời gian hợp lý sẽ giúp cho mọi người có tinh thần phấn khởi,hứng thú với bữa tiệc nhẹ này hơn.</p>
+          <p>Trên bàn không nên chỉ để nguyên đồ ăn nước uống mà nên bày thêm 1 vài lẵng hoa để thêm đẹp mắt hơn</p>
+          <p>Để một buối tiệc trà thành công thì cần phải lưu ý tới khá nhiều điều hơn cả đó chính là cần chuẩn bị thực đơn. Bạn có thể chọn thực đơn nhẹ nhàng. Thực tế không quan trọng là bạn chọn thực đơn cầu kì sang trọng chỉ cần bạn chọn các loại hoa quả bánh ngọt theo mùa là được rồi. Nếu bạn chọn thực đơn hợp lý thì chắc chắn bạn sẽ có buổi tiệc trà thú vị.</p>
+        </div>
+      </div>
+    <div id="nhantin">
+      <h4 class="title-nhantin">Bạn cần tư vấn ?</h4>
+      <form class="frm-nhantin" action name="frm-nhantin">
+        <input class="frm-ip" type="text" name="ten" placeholder="Nhập tên...">
+        <input class="frm-ip" type="number" name="dienthoai" placeholder="Nhập điện thoại...">
+        <input class="frm-ip" type="email" name="email" aria-describedby="emailHelp" placeholder="Nhập email...">
+        <textarea class="frm-ip" placeholder="Nhập nội dung..." name="noidung" rows="8"></textarea>
+        <input type="reset" value="Nhập lại">
+        <input type="submit" value="Gửi đi">
+      </form>
+    </div>
+  </div>
+
+
+  <!-- H2 -->
+    <div class="title"><h2>Trà</h2></div>
+
+  <!-- Box -->
+ 
+	<!--sign in-->
+	<div class="modal fade" id="sign_in">
+		<div class="modal-dialog">
+			<div class="modal-content p-3">
+				
+				<!--modal header-->
+				<div class="modal-header">
+					<h2 class="modal-title sign_header">Đăng nhập</h2>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!--modal body-->
+				<div class="modal-body">
+					<form action="">						
+						<!--email-->
+						<div class="form-group">
+							<label id="sign" for="email">Tài khoản</label>
+							<input type="email" name="email" class="form-control" id="email" placeholder="Nhập Email">
+						</div><!--end form group-->
+
+						<div class="form-group">
+							<label for="pwd">Mật khẩu</label>
+							<input type="password" name="pwd" class="form-control" id="pwd" placeholder="Nhập mật khẩu">
+						</div><!--end form group-->
+
+						<!--button-->
+						<button type="submit" onsubmit="signin()" class="btn btn_buy">Đăng nhập</button>
+						<a href="#" class="font_16 text-secondary"> &nbsp Quên mật khẩu?</a>	
+					</form>
+				</div><!--end modal body-->	
+
+				<div class="modal-footer">
+					<div class="d-flex justify-content-begin">
+						<div>
+							<p class="font_16">Chưa có tài khoản?</p> 
+						</div>&nbsp; &nbsp;
+						<div>
+							<a href="#" class="btn btn_view" data-dismiss="modal"  data-toggle="modal" data-target="#sign_up">Đăng kí</a>
+						</div>
+					</div>
+				</div>		
+			</div><!--end modal content-->
+		</div><!--end modal dialog-->
+	</div><!---end modal-->
+
+	<div class="modal fade" id="sign_up">
+		<div class="modal-dialog">
+			<div class="modal-content p-3">
+				<!--modal header-->
+				<div class="modal-header">
+					<h2>Đăng kí</h2>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!--modal body-->
+
+				<div class="modal-body">
+					<p class="font_16">Vui lòng điền vào mẫu này để tạo tài khoản.</p>
+					<form action="">
+						<!--name-->
+								<div class="form-group">
+									<label for="hoten">Họ và tên</label>
+									<input type="name" name="hoten" class="form-control" id="hoten" placeholder="Nhập họ và tên">		
+								</div><!--end form group-->
+
+
+								<div class="form-group">
+									<label for="email1">Tài khoản của bạn</label>
+									<input type="email" name="email1" class="form-control" id="email1" placeholder="Nhập tài khoản">		
+								</div><!--end form group-->
+
+								<div class="form-group">
+									<label for="pwd1">Mật khẩu</label>
+									<input type="password" name="pwd1" class="form-control" id="pwd1" placeholder="Nhập mật khẩu">		
+								</div><!--end form group-->
+
+								<div class="form-group">
+									<label for="pwd2">Xác nhận mật khẩu</label>
+									<input type="password" name="pwd2" class="form-control" id="pwd2" placeholder="Nhập xác nhận mật khẩu">		
+								</div><!--end form group-->
+								<p class="font_16">Bằng cách tạo một tài khoản, bạn đồng ý với <a href="#term" class="link_modal">Điều khoản và quyền riêng tư</a>.</p>
+						<!--button-->
+						<button type="submit" class="btn btn_buy">Đăng kí</button>
+					</form>	
+				</div><!--end modal body-->
+				<div class="modal-footer">
+					<a href="#" class="btn btn_view" data-dismiss="modal"  data-toggle="modal" data-target="#sign_in">Trở về đăng nhập</a>
+				</div>
+			</div><!--end modal content-->
+		</div><!--end modal dialog-->
+	</div><!--end modal-->
+
+
+	<div class="container"></div>
+
+	<div class="container d-md-block d-none">
+		<div class="row">
+			<div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+				<div class="product pro_bg_1">
+				</div>
+				<div class="d-flex justify-content-between">
+					<a href="detail.html" class="pro_link"><h3>Trà Ô long</h3></a>
+				</div>
+				<p class="price">250.000VND</p>
+				<p>Trà Ô Long được định hình thành những viên tròn, nhỏ, và đã được ủ cho lên men 30%...</p>
+				<a href="detail.html" class="btn btn_buy"">Chi tiết</a>
+				<a href="cart.html" class="btn btn_view">Mua ngay</a>
+			</div>
+
+			<div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+				<div class="product pro_bg_2">
+				</div>
+				<div class="d-flex justify-content-between">
+					<a href="detail.html" class="pro_link"><h3>Trà lài</h3></a>
+				</div>
+				<p class="price">260.000VND</p>
+				<p>Trà Lài có màu nước vàng, hương lài thơm ngát, vị chát vừa...</p>
+				<a href="detail.html" class="btn btn_buy">Chi tiết</a>
+				<a href="cart.html" class="btn btn_view">Mua ngay</a>
+			</div>
+
+			<div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+				<div class="product pro_bg_3">
+				</div>
+				<div class="d-flex justify-content-between">
+					<a href="detail.html" class="pro_link"><h3>Trà thiết phán quan</h3></a>
+				</div>
+				<p class="price">300.000VND</p>
+				<p>Trà Thiết Quan Âm nổi tiếng với vị trà dịu ngọt thơm ngon, làm tinh thần nhẹ nhàng,...</p>
+				<a href="detail.html" class="btn btn_buy">Chi tiết</a>
+				<a href="cart.html" class="btn btn_view">Mua ngay</a>
+			</div>
+
+			<div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+				<div class="product pro_bg_4">
+				</div>
+				<div class="d-flex justify-content-between">
+					<a href="detail.html" class="pro_link"><h3>Trà Thái Nguyên</h3></a>
+				</div>
+				<p class="price">270.000VND</p>
+				<p>Trà Thái Nguyên có màu xanh đen, xoăn chặt, sợi trà gọn nhỏ...</p>
+				<a href="detail.html" class="btn btn_buy">Chi tiết</a>
+				<a href="cart.html" class="btn btn_view">Mua ngay</a>
+			</div>
+
+			<div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+				<div class="product pro_bg_5">
+				</div>
+				<div class="d-flex justify-content-between">
+					<a href="detail.html" class="pro_link"><h3>Trà Sâm Dứa</h3></a>
+				</div>
+				<p class="price">300.000VND</p>
+				<p>Trà Sâm Dứa gần đây được biết đến như một sự phá cách trong nghệ thuật ướp trà...</p>
+				<a href="detail.html" class="btn btn_buy">Chi tiết</a>
+				<a href="cart.html" class="btn btn_view">Mua ngay</a>
+			</div>
+
+			<div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+				<div class="product pro_bg_6">
+				</div>
+				<div class="d-flex justify-content-between">
+					<a href="detail.html" class="pro_link"><h3>Trà Sen</h3></a>
+				</div>
+				<p class="price">205.000VND</p>
+				<p>Trà Sen Bảo Lộc dùng giống trà Shan Trấn Ninh, lá trà to, cánh trà mềm, xốp, thấm hương tốt...</p>
+				<a href="detail.html" class="btn btn_buy">Chi tiết</a>
+				<a href="cart.html" class="btn btn_view">Mua ngay</a>
+			</div>
+
+			<div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+				<div class="product pro_bg_7">
+				</div>
+				<div class="d-flex justify-content-between">
+					<a href="detail.html" class="pro_link"><h3>Trà Tuyết</h3></a>
+				</div>
+				<p class="price">300.000VND</p>
+				<p>Trà Tuyết là loại trà đặc biệt với những sợi trà phủ lông tơ trắng như sương tuyết...</p>
+				<a href="detail.html" class="btn btn_buy">Chi tiết</a>
+				<a href="cart.html" class="btn btn_view">Mua ngay</a>
+			</div>
+
+			<div class="col-lg-3 col-md-6 zoom mt-4 mb-5">
+				<div class="product pro_bg_8">
+				</div>
+				<div class="d-flex justify-content-between">
+					<a href="detail.html" class="pro_link"><h3>Trà Hoa Hồng</h3></a>
+				</div>
+				<p class="price">300.000VND</p>
+				<p>Trà Hoa Hồng rất phù hợp cho phụ nữ vì nó giúp giảm đau trong thời kỳ kinh nguyệt,...</p>
+				<a href="detail.html" class="btn btn_buy">Chi tiết</a>
+				<a href="cart.html" class="btn btn_view">Mua ngay</a>
+			</div>
+		</div><!--end row-->
+	</div><!--end container-->
+			<div class="container d-block d-md-none">
+				<div class="row">
+					<div class="col-6 mt-4 mb-5">
+						<div class="product pro_bg_1">
+						</div>
+						<p class="hashtag mb-0 mt-3">#highcaffeine</p>
+						<div class="heart d-flex justify-content-between">
+							<h3>Earl Grey Tea</h3>
+							<button class="btn_heart" data-toggle="tooltip" title="Add to wish list"><i class="far fa-heart"></i></button>
+							<button class="btn_heart_hover" data-toggle="tooltip" title="Add to wish list"><i class="fas fa-heart"></i></button>
+
+						</div>
+						<p class="price">$25.00</p>
+						
+						<a href="#" class="btn btn_buy">Mua ngay</a>		
+					</div><!--end copyzone-->	
+				</div><!--row-->
+			</div>
+			<div class="container">
+					<ul class="pagination">
+					  <li class="page-item"><a class="page-link" href="tea.html">Trước</a></li>
+					</ul>
+			</div>
+</body>
+</html>
+

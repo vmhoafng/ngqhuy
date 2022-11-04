@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mooncake</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Crimson+Text|Nunito+Sans:400,400i,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/Mooncake.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/popper.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
+</head>
+<style>
+	* {
+	  box-sizing: border-box;
+	}
+
+	.overlay {
+	  height: 100%;
+	  width: 100%;
+	  display: none;
+	  position: fixed;
+	  z-index: 1;
+	  top: 0;
+	  left: 0;
+	  background-color: rgb(255,255,255);
+	  background-color: rgba(255,255,255, 0.9);
+	}
+
+	.overlay-content {
+	  position: relative;
+	  top: 20%;
+	  width: 70%;
+	  text-align: center;
+	  margin-top: 30px;
+	  margin: auto;
+	}
+
+	.overlay .closebtn {
+	  position: absolute;
+	  top: 20px;
+	  right: 45px;
+	  font-size: 60px;
+	  cursor: pointer;
+	  color: #E58393;
+	}
+	.overlay input[type=text] {
+	  
+	  font-size: 18px;
+	  border: none;
+	  float: left;
+	  width: 80%;
+	  background-color:#FFE3E1;
+      color: #7C7C7C;
+      border-radius:30px;
+      margin-right:-25px;
+      padding:15px 30px;
+	}
+
+	.overlay a{
+	  float: left;
+	  width: 20%;
+	  cursor: pointer;
+	  border-radius: 30px;
+		padding:15px 30px;
+		border: none;
+		box-shadow: 0;
+		background-color: #E58393;
+		color: #fff;
+		font-size: 18px;
+		margin-left:-25px;
+		margin-right:0px;
+	}
+
+</style>
+<body>
+<!--nav-->
+	<!--header-->
+	<!--header xl-->
+		<div class="container-fluid d-lg-block d-none height_60 text-center">
+			<p class="logo_text">Tanu</p>
+		</div><!--end container-fluid-->
+		<div class="container-fluid d-lg-block d-none height_60 pink_bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-2"></div>
+					<div class="col-8">
+						<div class="d-flex justify-content-center">
+							<nav class="navbar navbar-expand-lg main_nav">
+								<ul class="navbar-nav">
+									<li class="nav-item"><a href="About.html" class="nav-link pr-4">About</a></li>
+									<li class="nav-item dropdown">
+										
+										<a class="nav-link dropdown-toggle pr-4" href="https://www.phuclong.com.vn" id="navbardrop" data-toggle="dropdown" onclick="gotoBlog()">
+									        Tea
+									    </a>
+									    <div class="dropdown-menu justify-content-center" style="width:400px"> 
+									    	<div class="d-flex">
+										        <a class="dropdown-item aInline text-center" href="leaf.html">
+										        	<img class="leaf" src="imgs/leaf.png"><br>
+										        	Loose leaf
+										    	</a>
+										        <a class="dropdown-item aInline text-center" href="bags.html">
+										        	<img class="bag" src="imgs/bag.png"><br>
+										        	Satches
+										    	</a>
+									    	</div>
+									    </div>
+									</li>
+									<li class="nav-item"><a href="cake_home.html" class="nav-link pr-4">Mooncake</a></li>
+									<li class="nav-item"><a href="blog.html" class="nav-link pr-4">Blog</a></li>
+									<li class="nav-item"><a href="Events.html" class="nav-link pr-4">Events</a></li>
+									<li class="nav-item"><a href="gallery.html" class="nav-link pr-4">Gallery</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					
+					<div class="col-2">
+						<div class="d-flex justify-content-begin">
+							<div>
+								<button class="openBtn pt_signin btn btn-lg btn-link" onclick="openSearch()">
+									<i class="cart_grey fas fa-search"></i>
+								</button>
+							</div>
+							<div class="pt_signin">
+								<a href="#" class="btn btn_view_2" data-toggle="modal" data-target="#sign_in">Sign In</a>
+							</div>
+							<div class="dropdown pt-1">
+								<button class="dropdown-toggle btn btn-lg btn-link" href="#" data-toggle="dropdown">
+							    	<p class="cart_grey"><i class="fas fa-shopping-cart"></i></p>
+							    </button>
+							    
+							    <div class="dropdown-menu cart" style="margin-left:-80px">
+							    	<a class="dropdown-item" href="cart.html"><i class="fas fa-user-cog symbol"></i> &nbsp; Account</a>
+							    	<hr>
+							    	<a class="dropdown-item" href="cart.html"><i class="fas fa-shopping-cart symbol"></i> &nbsp; Cart</a>
+							    	<a class="dropdown-item" href="cart.html"><i class="fas fa-parachute-box symbol"></i> &nbsp; Orders</a>
+
+							    	<a class="dropdown-item" href="#"><i class="fas fa-heart symbol"></i> &nbsp; Wish list</a>
+							        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#sign_out"><i class="fas fa-user symbol"></i> &nbsp; Sign out</a>
+							   	</div>
+						   	</div>
+					   	</div>
+					</div>
+				</div><!--end row-->
+			</div><!--end container-->
+		</div><!--end container-fluid-->  	
+
+	<!--header md-->
+	<div class="container-fluid d-lg-none d-md-block height_60 text-center">
+		<p class="logo_text">Tanu</p>
+	</div>
+	<div class="container-fluid d-lg-none d-md-block pink_bg height_60">
+		<div class="container">
+			<div class="row d-flex justify-content-between">
+				<div>
+					<nav class="navbar navbar-collapse">
+
+						<!--button-->
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+							<i class="fas fa-bars hamburger"></i>
+						</button>
+
+						<!--main nav-->
+						<div class="collapse navbar-collapse bg_nav mt-1 px-2" id="main_nav">
+							<ul class="navbar-nav">
+								
+								<!--nav-item-->
+								<li class="nav-item">
+									<a href="About.html" class="nav-link">About</a>
+								</li>
+
+								<!--nav-item-->
+								<li class="nav-item dropdown mr-3">
+							      	<a class="nav-link dropdown-toggle" href="tea.html" id="navbardrop" data-toggle="dropdown">
+							        Tea
+							      	</a>
+
+							      	<!--drop down-->
+							      	<div class="dropdown-menu">
+							      		<a class="dropdown-item" href="leaf.html">Loose leaf</a>
+							        	<a class="dropdown-item" href="bags.html">Satches</a>
+							      	</div>   	
+							    </li>
+
+							    <li class="nav-item">
+									<a href="cake_home.html" class="nav-link">Mooncakes</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="blog.html" class="nav-link">Blog</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="Events.html" class="nav-link">Events</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="gallery.html" class="nav-link">Gallery</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div><!--end menu-->
+
+				<!--search-->
+				
+
+				<!--sign-->
+				<div class="d-flex justify-content-begin">
+							<div>
+								<button class="openBtn pt_signin btn btn-lg btn-link" onclick="openSearch()">
+									<i class="cart_grey fas fa-search"></i>
+								</button>
+							</div>
+							<div class="pt_signin">
+								<a href="#" class="btn btn_view_2" data-toggle="modal" data-target="#sign_in">Sign In</a>
+							</div>
+							<div class="dropdown pt-1">
+								<button class="dropdown-toggle btn btn-lg btn-link text-white" href="#" data-toggle="dropdown">
+							    	<p class="cart_grey"><i class="fas fa-shopping-cart"></i></p>
+							    </button>
+							    
+							    <div class="dropdown-menu cart" style="margin-left:-100px">
+							    	<a class="dropdown-item" href="cart.html"><i class="fas fa-user-cog symbol"></i> &nbsp; Account</a>
+							    	<hr>
+							    	<a class="dropdown-item" href="cart.html"><i class="fas fa-shopping-cart symbol"></i> &nbsp; Cart</a>
+							    	<a class="dropdown-item" href="cart.html"><i class="fas fa-parachute-box symbol"></i> &nbsp; Orders</a>
+
+							    	<a class="dropdown-item" href="#"><i class="fas fa-heart symbol"></i> &nbsp; Wish list</a>
+							        <a class="dropdown-item" href="#"><i class="fas fa-user symbol"></i> &nbsp; Sign out</a>
+							   	</div>
+						   	</div>
+					   	</div>
+					</div>
+			</div><!--end row-->
+		</div><!--end container-->
+	</div><!--end container-fluid-->
+
+	<div id="myOverlay" class="overlay">
+		
+		  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+		  <div class="overlay-content pt-5">
+			    <form action="/action_page.php">
+			      <input type="text" placeholder="Search" name="search">
+			      <a href="search.html"><i class="fa fa-search"></i></a>
+			    </form>
+			    <br><br>
+		    <div class="mt-5">				    	
+		   		<button class="btn btn_view_1 mr-3 mb-3">Loose leaf</button>
+		   		<button class="btn btn_view_1 mr-3 mb-3">Satches</button>
+		   		<button class="btn btn_view_1 mr-3 mb-3">Mooncake</button>
+		   		<button class="btn btn_view_1 mr-3 mb">Gift box</button>
+		    </div>
+
+		  </div>
+	</div>
+
+<!--modal-->
+
+	<!--sign in-->
+	<div class="modal fade" id="sign_in">
+		<div class="modal-dialog">
+			<div class="modal-content p-3">
+				
+				<!--modal header-->
+				<div class="modal-header">
+					<h2 class="modal-title sign_header">Sign In</h2>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!--modal body-->
+				<div class="modal-body">
+					<form action="">						
+						<!--email-->
+						<div class="form-group">
+							<label id="sign" for="email">User name:</label>
+							<input type="email" name="email" class="form-control" id="email" placeholder="Your email">
+						</div><!--end form group-->
+
+						<div class="form-group">
+							<label for="pwd">Password:</label>
+							<input type="password" name="pwd" class="form-control" id="pwd" placeholder="Your password">
+						</div><!--end form group-->
+						
+						<!--remember me-->
+						<div class="form-group form-check">
+							<label class="form-check-label">
+								<input type="checkbox" name="remember" class="form-check-input">Remember me
+							</label>
+						</div><!--end form group-->
+
+						<!--button-->
+						<button type="submit" class="btn btn_buy">Sign in</button>
+						<a href="#" class="font_16 text-secondary"> &nbsp Forgot your password?</a>
+						<div class="row">
+							<div class="col-6">
+								<button type="submit" class="btn btn-outline-primary border_30 mt-4"><i class="fab fa-facebook-f"></i> &nbsp;  Sign in with Facebook</button>
+							</div>
+							<div class="col-6">
+								<button type="submit" class="btn btn-outline-danger border_30 mt-4"><i class="fab fa-google"></i>
+								&nbsp; Sign in with Google</button>
+							</div>
+						</div><br>	
+					</form>
+				</div><!--end modal body-->	
+
+				<div class="modal-footer">
+					<div class="d-flex justify-content-begin">
+						<div>
+							<p class="font_16">Don't have any account?</p> 
+						</div>&nbsp; &nbsp;
+						<div>
+							<a href="#" class="btn btn_view" data-dismiss="modal"  data-toggle="modal" data-target="#sign_up">Sign up</a>
+						</div>
+					</div>
+				</div>		
+			</div><!--end modal content-->
+		</div><!--end modal dialog-->
+	</div><!---end modal-->
+
+	<div class="modal fade" id="sign_up">
+		<div class="modal-dialog">
+			<div class="modal-content p-3">
+				<!--modal header-->
+				<div class="modal-header">
+					<h2>Sign Up</h2>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!--modal body-->
+
+				<div class="modal-body">
+					<p class="font_16">Please fill in this form to create an account.</p>
+					<form action="">
+						<!--name-->
+						
+							
+								<div class="form-group">
+									<label for="hoten">Name:</label>
+									<input type="name" name="hoten" class="form-control" id="hoten" placeholder="Your name">		
+								</div><!--end form group-->
+
+
+								<div class="form-group">
+									<label for="email1">User name:</label>
+									<input type="email" name="email1" class="form-control" id="email1" placeholder="Your user name">		
+								</div><!--end form group-->
+
+								<div class="form-group">
+									<label for="pwd1">Password:</label>
+									<input type="password" name="pwd1" class="form-control" id="pwd1" placeholder="Your password">		
+								</div><!--end form group-->
+
+								<div class="form-group">
+									<label for="pwd2">Confirm password:</label>
+									<input type="password" name="pwd2" class="form-control" id="pwd2" placeholder="Your password">		
+								</div><!--end form group-->
+								<p class="font_16">By creating an account you agree to our <a href="#term" class="link_modal">Terms & Privacy</a>.</p>
+						<!--button-->
+						<button type="submit" class="btn btn_buy">Sign up</button>
+					</form>	
+				</div><!--end modal body-->
+				<div class="modal-footer">
+					<a href="#" class="btn btn_view" data-dismiss="modal"  data-toggle="modal" data-target="#sign_in">Back to Sign in</a>
+				</div>
+			</div><!--end modal content-->
+		</div><!--end modal dialog-->
+	</div><!--end modal-->
+
+<!--Slideshow cake-->
+ 	<div class="container-fluid">
+		<div id="Mooncake1" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#Mooncake1" data-slide-to="0" class="active"></li>
+    <li data-target="#Mooncake1" data-slide-to="1"></li>
+    <li data-target="#Mooncake1" data-slide-to="2"></li>
+    <li data-target="#Mooncake1" data-slide-to="3"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner m-0 p-0">
+    <div class="carousel-item active">
+    <a href="#"><img src="img/cakehome1.png"></a>
+
+    </div>
+    <div class="carousel-item">
+ 		<a href="#"><img src="img/cakehome2.png"></a>
+    </div>
+    <div class="carousel-item">
+		 <a href="#"><img src="img/cakehome3.png"></a>
+    </div>
+    <div class="carousel-item">
+ 	<a href="#"><img src="img/cakehome4.png"></a>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#Mooncake1" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#Mooncake1" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+		</div>
+
+	</div>
+<br><br><br>
+<!--cake1-->
+	<div class="container">
+		<a href="cake home.html" style="text-decoration: none;"><h1 class="zoom text-center">Moon cake</h1></a>
+		<p class="text-center">We constantly strive to create the highest quality of tea products and mooncakes through ceaseless effort and passion. We are truly connected to and contribute deeply to the Vietnam's longstanding culture of drinking tea and enjoying mooncakes. </p>
+	</div>
+	<div class="container-fluid background_pk d-none d-sm-none d-md-none d-lg-block d-xl-block">
+		<div class="d-flex justify-content-between p-2 m-5">
+			<a href="#" class="zoom" style="text-decoration: none;"><p style="color: #2C2C2C; font-size: 27px;">Shipping within 2-3 workdays</p></a>
+			<a href="#" class="zoom" style="text-decoration: none;"><p style="color: #2C2C2C; font-size: 27px;">Free shiping on orders over $100</p></a>
+			<a href="#" class="zoom" style="text-decoration: none;"><p style="color: #2C2C2C; font-size: 27px;">30 days money back guarantee policy</p></a>
+			<a href="#" class="zoom" style="text-decoration: none;"> <p style="color: #2C2C2C; font-size: 27px;">Proudly shiping across Vietnam </p> </a>
+
+
+		</div>
+	</div>
+<br><br>
+<!--Series-->
+	<div class="container Series">
+		<div class="Series1">
+			<a href="traditional.html" style="text-decoration: none;"><h2 class="zoom text-center" style="color: #ffff;" >Traditional Mooncakes Series</h2></a>
+		</div>
+		<div class="Series2">
+			<a href="traditional.html" style="text-decoration: none;"><h2 class="zoom text-center" style="color: #ffff;" >Snowy Mooncakes Series</h2></a>
+		</div>
+		<div class="Series3">
+			<a href="traditional.html" style="text-decoration: none;"><h2 class="zoom text-center" style="color: #ffff;" >Lava & Custard Mooncakes Series</h2></a>
+		</div>
+		<div class="Series4">
+			<a href="traditional.html" style="text-decoration: none;"><h2 class="zoom text-center" style="color: #ffff;" >Other series</h2></a>
+		</div>
+	</div>
+
+<div class="clear"></div>
+<!--box-->
+
+	<div class="container-fluid box">
+		<br><br>
+		<a href="box.html " style="text-decoration: none;"><h1  class="zoom text-center">Special box</h1></a>
+<br>
+<div class="Slidenshow p-1 m-1">
+
+	<div class="slider1">
+		<div class="row">
+			<div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl">
+				<a href="box.html"><img class="zoom box1" src="img/box1.png"></a>
+			</div>
+			<div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl">
+				<h2 style="color: black; font-size: 48px">God box</h2><br>
+				<p class="price" style="font-size: 50px;">$1000</p>
+				<p class="p-2 text_box">Our contemporary selection of snowskin mooncakes are stylishly presented in a chic gold box.</p>
+			</div>
+		
+		</div>
+	</div>
+
+	<div class="slider2">
+		<div class="row">
+			<div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl">
+				<a href="box.html"><img class="zoom box1" src="img/box1.png"></a>
+			</div>
+			<div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl">
+				<h2 style="color: black; font-size: 48px">God box</h2><br>
+				<p class="price" style="font-size: 50px;">$1000</p>
+				<p class="p-2 text_box" >Our contemporary selection of snowskin mooncakes are stylishly presented in a chic gold box.</p>
+			</div>
+		
+		</div>
+	</div>
+
+	<div class="slider3">
+		<div class="row">
+			<div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl">
+				<a href="box.html"><img class="zoom box1" src="img/box1.png"></a>
+			</div>
+			<div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl">
+				<h2 style="color: black; font-size: 48px">God box</h2><br>
+				<p class="price" style="font-size: 48px;">$1000</p>
+				<p class=" p-2 text_box" >Our contemporary selection of snowskin mooncakes are stylishly presented in a chic gold box.</p>
+			</div>
+		
+		</div>
+	</div>
+
+	<div class="slider4">
+		<div class="row">
+			<div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl">
+				<a href="box.html"><img class="zoom box1" src="img/box1.png"></a>
+			</div>
+			<div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl">
+				<h2 style="color: black; font-size: 48px">God box</h2><br>
+				<p class="price" style="font-size: 50px;">$1000</p>
+				<p class="p-2 text_box" >Our contemporary selection of snowskin mooncakes are stylishly presented in a chic gold box.</p>
+			</div>
+		
+		</div>
+	</div>
+
+</div>
+
+	</div>
+<br><br><br>
+<!--subcribe-->
+	<!--sub xl-->
+	<div class="container mt-5 pt-5 text-center d-lg-block d-none">
+		<h1>Join our newsletter</h1>
+		<p>Stay up to date with all things about Tanu.</p>
+		<div class="d-flex justify-content-center">
+			<div class="col-8">
+				<div class="input-group">
+					<input type="text" name="form-control" id="email_sub" placeholder="Enter your email here">
+					<div class="input-group-append">
+						<button class="btn btn_email" id="email_sub_btn" type="submit">Subcribe</button>
+					</div>
+				</div><!--input group-->
+		</div><!--col 8-->
+		</div>
+	</div><!--end container-->
+
+	<!--sub md-->
+	<div class="container  mt-5 pt-5 text-center d-lg-none d-md-block d-none">
+		<h1>Join our newsletter</h1>
+		<p>Stay up to date with all things about Tanu.</p>
+		<div class="d-flex justify-content-center">
+			<div class="col-10">
+				<div class="input-group">
+					<input type="text" name="form-control" id="email_sub" placeholder="Enter your email here">
+					<div class="input-group-append">
+						<button class="btn btn_email" id="email_sub_btn" type="submit">Subcribe</button>
+					</div>
+				</div><!--input group-->
+		</div><!--col 8-->
+		</div>
+	</div><!--end container-->
+
+	<!--sub sm-->
+	<div class="container text-center  mt-5 pt-5 d-block d-md-none pb-5">
+		<h1>Join our newsletter</h1>
+		<p>Stay up to date with all things about Tanu.</p>
+		<div class="d-flex justify-content-center">
+			<div class="col-12">
+				<div class="input-group">
+					<input type="text" name="form-control" id="email_sub" placeholder="Enter your email here">
+					<div class="input-group-append">
+						<button class="btn btn_email" id="email_sub_btn" type="submit">Subcribe</button>
+					</div>
+				</div><!--input group-->
+			</div><!--col 8-->
+		</div>
+	</div><!--end container-->
+
+
+
+
+<!--footer-->
+	<!--footer xl-->
+
+	<div class="container-fluid d-lg-block d-none footer_bg mt-5">
+		<div class="container">
+			<div class="row pb-3">
+				<div class="col-3 logo_footer pt_150 pl-0">
+					<img class="w-100" src="imgs/logo_footer.png">
+				</div>	
+				<div class="col-3">
+					<p class="footer_h1">Company</p>
+					<ul class="nav flex-column footer_links">
+						<li class="nav-item"><a href="About.html" class="nav-link pt-0">About us</a></li>
+						<li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Career opoturnities</a></li>
+						<li class="nav-item"><a href="contact.html" class="nav-link">Locations</a></li>
+					</ul>
+				</div>
+
+				<div class="col-3">
+					<p class="footer_h1">Customer support</p>
+					<ul class="nav flex-column footer_links">
+						<li class="nav-item"><a href="faq.html" class="nav-link pt-0">FAQs</a></li>
+						<li class="nav-item"><a href="faq.html" class="nav-link">Shipping & Delivery</a></li>
+						<li class="nav-item"><a href="faq.html" class="nav-link">How to return</a></li>
+					</ul>
+				</div>
+
+				<div class="col-3">
+					<p class="footer_h1">Customer support</p>
+					<ul class="nav">
+						<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-facebook-f"></i></a></li>
+						<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-instagram"></i></a></li>
+						<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-twitter"></i></a></li>
+						<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-youtube"></i></a></li>
+					</ul>
+				</div>	
+			</div><!--end row-->
+			<hr class="footer_hr">
+			<div class="row pt-2">
+				<div class="col-3">
+					<p class="grey_text">Copyright &copy;Tanu. All rights reserved.</p>
+				</div>
+				<div class="col-9">
+					<div class="row">
+						<a href="privacy.html" class="pink_link">Privacy Policies</a>
+						<p class="ver_bar">&nbsp; | &nbsp;</p>
+						<a href="#" class="pink_link">Terms of Use</a>
+						<p class="ver_bar">&nbsp; | &nbsp;</p>
+						<a href="#" class="pink_link">Paid Service Terms and Conditions</a>
+					</div>
+				</div>
+			</div><!--end row-->
+		</div><!--end container-->
+	</div><!--end container-fluid xl-->
+
+	<!--footer md-->
+	<div class="container-fluid footer_bg d-lg-none d-md-block d-none mt-5">
+		<div class="container">
+			<div class="text-center col-4 pt_100">
+				<img class="w-100" src="imgs/logo_footer.png">
+			</div>
+			<div class="d-flex justify-content-center">
+				<div class="col-8 text-center">
+					<p class="footer_h1">Follow us now on</p>
+					<div class="d-flex justify-content-center">
+						<ul class="nav">
+							<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-instagram"></i></a></li>
+							<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-twitter"></i></a></li>
+							<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>	
+				</div>	
+			</div><!--end d-flex-->
+			<div class="row pt-3 pb-3">
+				<div class="col-6">
+					<p class="footer_h1">Company</p>
+					<ul class="nav flex-column footer_links">
+						<li class="nav-item"><a href="About.html" class="nav-link pt-0">About us</a></li>
+						<li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Career opoturnities</a></li>
+						<li class="nav-item"><a href="contact.html" class="nav-link">Locations</a></li>
+					</ul>
+				</div>
+
+				<div class="col-6">
+					<p class="footer_h1">Customer support</p>
+					<ul class="nav flex-column footer_links">
+						<li class="nav-item"><a href="faq.html" class="nav-link pt-0">FAQs</a></li>
+						<li class="nav-item"><a href="faq.html" class="nav-link">Shipping & Delivery</a></li>
+						<li class="nav-item"><a href="faq.html" class="nav-link">How to return</a></li>
+					</ul>
+				</div>
+			</div><!--end row-->
+			<hr class="footer_hr">
+			<div class="d-flex justify-content-center pt-3">
+				<div class="row">
+					<a href="privacy.html" class="pink_link">Privacy Policies</a>
+					<p class="ver_bar">&nbsp; | &nbsp;</p>
+					<a href="#" class="pink_link">Terms of Use</a>
+					<p class="ver_bar">&nbsp; | &nbsp;</p>
+					<a href="#" class="pink_link">Paid Service Terms and Conditions</a>
+				</div>
+			</div>
+			<div class="text-center">
+				<p class="grey_text">Copyright &copy;Tanu. All rights reserved.</p>
+			</div>
+			
+		</div><!--end container-->
+	</div><!--end container-fluid md-->
+
+	<div class="container-fluid footer_bg_sm d-md-none d-block mt-5">
+		<div class="container py-5">
+			<div class="text-center">
+				<img src="imgs/logo_footer_sm.png">
+			</div>
+			<div class="d-flex justify-content-center">
+				<div class="col-12 text-center">
+					<p class="footer_h1 pt-3">Follow us now on</p>
+					<div class="d-flex justify-content-center">
+						<ul class="nav">
+							<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-instagram"></i></a></li>
+							<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-twitter"></i></a></li>
+							<li class="nav-item"><a href="#" class="nav-link symbol_1"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>	
+				</div>	
+			</div><!--end d-flex-->
+			<div class="row pt-3 pb-3">
+				<div class="col-6">
+					<p class="footer_h1">Company</p>
+					<ul class="nav flex-column footer_links">
+						<li class="nav-item"><a href="About.html" class="nav-link pt-0">About us</a></li>
+						<li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Career opoturnities</a></li>
+						<li class="nav-item"><a href="contact.html" class="nav-link">Locations</a></li>
+					</ul>
+				</div>
+
+				<div class="col-6">
+					<p class="footer_h1">Customer support</p>
+					<ul class="nav flex-column footer_links">
+						<li class="nav-item"><a href="faq.html" class="nav-link pt-0">FAQs</a></li>
+						<li class="nav-item"><a href="faq.html" class="nav-link">Shipping & Delivery</a></li>
+						<li class="nav-item"><a href="faq.html" class="nav-link">How to return</a></li>
+					</ul>
+				</div>
+			</div><!--end row-->
+			<hr class="footer_hr">
+			<div class="row d-flex justify-content-center pt-3">
+				<a href="privacy.html" class="pink_link">Privacy Policies</a>
+				<p class="ver_bar">&nbsp; | &nbsp;</p>
+				<a href="#" class="pink_link">Terms of Use</a>
+				<p class="ver_bar">&nbsp; | &nbsp;</p>
+				<a href="#" class="pink_link">Paid Service Terms and Conditions</a>
+			</div>
+			<div class="text-center pt-3">
+				<p class="grey_text">Copyright &copy;Tanu. All rights reserved.</p>
+			</div>
+		</div><!--end container-->
+	</div><!--end container-fluid sm-->
+
+
+	<script type="text/javascript" src="slick/jquery.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).on('ready',function(){
+			$('.Slidenshow').slick({
+				dots: true,
+				centerMode: true,
+				autoplay: true,
+				autoplaySpeed: 2000,
+			});
+		})
+		function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+$(document).ready(function(){
+		$(".dropdown").mouseenter(function(){
+			$(this).find(".dropdown-menu").slideDown("fast");
+		})
+		$(".dropdown").mouseleave(function(){
+			$(this).find(".dropdown-menu").slideUp("slow");
+		})
+	})
+function gotoBlog(){
+		location.replace("blog.html");
+	}
+	$(document).ready(function(){
+		$(".dropdown").mouseenter(function(){
+			$(this).find(".dropdown-menu").slideDown("fast");
+		})
+		$(".dropdown").mouseleave(function(){
+			$(this).find(".dropdown-menu").slideUp("fast");
+		})
+	})
+	</script>
+
+</body>
+</html>
+
+
+		

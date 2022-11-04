@@ -1,0 +1,49 @@
+ body{
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 16px;
+	line-height:  24px;
+	margin: 0px;
+	padding: 0px
+}
+h2{
+	font-size: 36px;
+	color: blue;
+}
+/* form styles */
+form .row {
+  display: block;
+  padding: 7px 8px;
+  margin-bottom: 7px;
+}
+
+form label {
+  display: inline-block;
+  font-weight: bold;
+  width: 160px;
+  padding: 6px 0;
+  color: #464646;
+  vertical-align: top;
+}
+.Request_for_proposal{
+	padding: 30px;
+	margin: 20px ;
+	width: 600px;
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	text-align: left;
+
+
+
+}
+.Request_for_proposal form label{
+	font-weight: bold;
+	font-size: 20px;
+	color: brown;
+	height: 30px;
+	padding: 5px;
+
+}
+
+nav.tamgiac form input[type=text]{
+
+}
